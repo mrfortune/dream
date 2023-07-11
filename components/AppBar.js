@@ -155,11 +155,11 @@ export default function DrawerAppBar (props) {
             worldshaker
           </Typography>
           <Box alignItems="center" sx={{ display: { xs: 'none', sm: 'none', md:'flex', xl:'flex', lg:'flex' } }}>
-            {navLinks.map((link, id) => {
+            {navLinks.map((link, index) => {
               const selectedNavItem = "Contact";
               if (link.name != "Contact"){
                 return(
-                  <Link key={id} href={link.path} className={currentRoute === "/" ? "nav.active" : "nonActive"}>
+                  <Link key={index} href={link.path} className={currentRoute === "/" ? "nav.active" : "nonActive"}>
                     {link.name}
                   </Link>
         
@@ -167,40 +167,17 @@ export default function DrawerAppBar (props) {
               }
               else{
                 // eslint-disable-next-line react/jsx-key
-                return ( <Button size="sm" className="contactButton" color="secondary" css={{ borderRadius: "$xl", marginLeft:'2rem' }}>
-            <Link key={link.id} href={link.path}
+                return ( <Button key={index} size="sm" className="contactButton" color="secondary" css={{ borderRadius: "$xl", marginLeft:'2rem' }}>
+            <Link href={link.path}
               css={{ color: "primaryLinkText", fontSize: "$md" }}
             >
             {link.name} 
             </Link>
           </Button> );
               }
-              // const Nav = () => {
-              //   return (
-              //     <nav>
-              //       <ul>
-              //         <li>{selectedNavItem === "home" ? navItems.home : null}</li>
-              //         <li>{selectedNavItem === "about" ? navItems.about : null}</li>
-              //         <li>{selectedNavItem === "contact" ? navItems.contact : null}</li>
-              //       </ul>
-              //     </nav>
-              //   );
-              // };
-          // return(
-          //     <Link key={index} href={link.path} className={currentRoute === "/" ? "active" : "nonActive"}>
-          //       {link.name}
-          //     </Link>
-    
-          // );
+           
         })}
-        {/* <Button size="sm" color="secondary" css={{ borderRadius: "$xl" }}>
-            <Link
-              href="/contact"
-              css={{ color: "primaryLinkText", fontSize: "$md" }}
-            >
-              Contact
-            </Link>
-          </Button> */}
+       
           </Box>
         </Toolbar>
       </AppBar>
