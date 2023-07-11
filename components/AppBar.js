@@ -38,11 +38,26 @@ const navLinks = [
     id: "2",
     name: "About",
     path: "/about",
+   
   },
   {
     id: "3",
     name: "Devices",
-    path: "/devices",
+    path: "/devices", 
+    submenu: [
+      {
+        title: 'web design',
+        url: 'web-design',
+      },
+      {
+        title: 'web development',
+        url: 'web-dev',
+      },
+      {
+        title: 'SEO',
+        url: 'seo',
+      },
+    ],
   },
   {
     id: "3",
