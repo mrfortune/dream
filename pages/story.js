@@ -17,7 +17,7 @@ import { Avatar } from "@nextui-org/react";
 const Story = () => {
   return (
     <div>
-      <Meta title="WorldShaker Interactive::Story" />
+      <Meta title="Dream Medical::Story" />
       <Box
         component="div"
         mt={15}
@@ -95,7 +95,7 @@ const Story = () => {
               compositions into code.
             </Typography>
             <Typography mb={2} variant="body1">
-              WorldShaker Interactive was founded to solve a problem that my
+              Dream Medical was founded to solve a problem that my
               cousin and I had identified, wrote a complete business plan for
               and designed a mock-up. Our plan did not get funded but I see it
               everytime I visit SoundCloud. I'm not saying that they stole our

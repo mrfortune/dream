@@ -117,7 +117,7 @@ const WineStore = () => {
               A group of entrepreneurs are planning to open a new wine store in
               the Prospect-Lefferts Gardens area to serve an up and coming strip
               that does not currently have any wine stores. As they build out
-              the store they have also engaged WorldShaker Interactive to design
+              the store they have also engaged Dream Medical to design
               and build a custom e-commerce solution to serve their customers
               and future website users. They offer a very curated wine
               experience to their clients and want to mirror that experience in

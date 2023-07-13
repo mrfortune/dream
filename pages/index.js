@@ -123,27 +123,7 @@ export default function Home() {
               ></Image>
               </motion.div>
             </Grid>
-            <Grid item xs={12} sm={12} md={12} lg={12} xl={12}>
-          <motion.div
-                      initial={{ opacity: 0 }}
-                      whileInView={{ opacity: 1 }}
-                      viewport={{ once: true }}
-                      transition={{ duration: 1 }}
-                    >
-                      <Image
-                        src="assets/workcbanner.png"
-                         width={1440}
-                         height={180}
-                        alt="Work Banner"
-                        layout="responsive"
-                        loader={myLoader}
-                        sizes="(max-width: 1440px) 100vw,
-              (max-width: 720px) 50vw,
-              33vw"
-                      >
-                      </Image>
-                    </motion.div>
-          </Grid>
+            
           </Grid>
         </Box>
       </Box>

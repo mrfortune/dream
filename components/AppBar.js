@@ -73,7 +73,17 @@ const navLinks = [
     ],
   },
   {
-    id: "3",
+    id: "4",
+    name: "Products",
+    path: "/products",
+  },
+  {
+    id: "5",
+    name: "Services",
+    path: "/services",
+  },
+  {
+    id: "6",
     name: "Contact",
     path: "/contact",
   },
@@ -152,22 +162,40 @@ export default function DrawerAppBar (props) {
             component="div"
             sx={{ flexGrow: 1, display: { xs: 'none', sm: 'none' } }}
           >
-            worldshaker
+            Dream Medical
           </Typography>
           <Box alignItems="center" sx={{ display: { xs: 'none', sm: 'none', md:'flex', xl:'flex', lg:'flex' } }}>
-            {navLinks.map((link, index) => {
+            {navLinks.map((link, id) => {
               const selectedNavItem = "Contact";
               if (link.name != "Contact"){
                 return(
-                  <Link key={index} href={link.path} className={currentRoute === "/" ? "nav.active" : "nonActive"}>
-                    {link.name}
-                  </Link>
+                 
         
+        
+            
+              <Link key={id} href={link.path} className={currentRoute === "/" ? "nav.active" : "nonActive"}>
+                {link.name} 
+           
+              {link.subItems && (
+               <ul className="subnav">
+              
+
+                {link.subItems.map((subItem) => (
+                  
+                  <li key={subItem.id}>
+                    <a href={subItem.url}>{subItem.label}</a>
+                  </li>
+                ))}
+              </ul>
+               )}
+                </Link>
+             
+       
               );
               }
               else{
                 // eslint-disable-next-line react/jsx-key
-                return ( <Button key={index} size="sm" className="contactButton" color="secondary" css={{ borderRadius: "$xl", marginLeft:'2rem' }}>
+                return ( <Button key={id} size="sm" className="contactButton" color="secondary" css={{ borderRadius: "$xl", marginLeft:'2rem' }}>
             <Link href={link.path}
               css={{ color: "primaryLinkText", fontSize: "$md" }}
             >
