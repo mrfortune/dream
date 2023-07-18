@@ -14,8 +14,7 @@ import { transform } from 'framer-motion';
 import { useRouter } from 'next/router'
 import myLoader from "../components/Loader";
 import Image from "next/image";
-import DropDown from '../components/DropDown';
-import { menuItems } from '../menuItems';
+import { navItems } from './navItems';
 import MenuItems from './MenuItems';
 // interface Props {
 //   /**
@@ -164,7 +163,7 @@ export default function DrawerAppBar (props) {
             Dream Medical
           </Typography>
           <Box alignItems="center" sx={{ display: { xs: 'none', sm: 'none', md:'flex', xl:'flex', lg:'flex' } }}>
-            {navLinks.map((link, id) => {
+            {navItems.map((link, id) => {
               const selectedNavItem = "Contact";
               if (link.name != "Contact"){
                 return(

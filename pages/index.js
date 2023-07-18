@@ -24,7 +24,7 @@ export default function Home() {
   return (
     <div className={styles.container}>
       <Head>
-        <title>WorldShaker</title>
+        <title>Dreame Medical</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
