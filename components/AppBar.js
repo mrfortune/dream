@@ -5,10 +5,6 @@ import CssBaseline from '@mui/material/CssBaseline';
 import Divider from '@mui/material/Divider';
 import Drawer from '@mui/material/Drawer';
 import IconButton from '@mui/material/IconButton';
-import List from '@mui/material/List';
-import ListItem from '@mui/material/ListItem';
-import ListItemButton from '@mui/material/ListItemButton';
-import ListItemText from '@mui/material/ListItemText';
 import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
@@ -18,6 +14,9 @@ import { transform } from 'framer-motion';
 import { useRouter } from 'next/router'
 import myLoader from "../components/Loader";
 import Image from "next/image";
+import DropDown from '../components/DropDown';
+import { menuItems } from '../menuItems';
+import MenuItems from './MenuItems';
 // interface Props {
 //   /**
 //    * Injected by the documentation to work in an iframe.
@@ -169,10 +168,6 @@ export default function DrawerAppBar (props) {
               const selectedNavItem = "Contact";
               if (link.name != "Contact"){
                 return(
-                 
-        
-        
-            
               <Link key={id} href={link.path} className={currentRoute === "/" ? "nav.active" : "nonActive"}>
                 {link.name} 
            
@@ -183,13 +178,12 @@ export default function DrawerAppBar (props) {
                 {link.subItems.map((subItem) => (
                   
                   <li key={subItem.id}>
-                    <a href={subItem.url}>{subItem.label}</a>
+                    <Link href={subItem.url}>{subItem.label}</Link>
                   </li>
                 ))}
               </ul>
                )}
                 </Link>
-             
        
               );
               }
