@@ -37,18 +37,50 @@ nav a:hover {
 nav {
   display: flex;
 }
-nav ul.menus li.menu-items{
+nav ul.menu{
+  display:flex; 
   list-style-type: none;
 }
-nav ul.menus li.menu-items ul.dropdown{
+nav ul.menu li.menu-items{
+ 
+  margin-right:1.2rem; 
+  position:relative;
+}
+nav ul.menu li.menu-items.click{
+  display:block;
+ 
+}
+nav ul.menu li.menu-items ul.dropdown{
   display:none;
+  list-style-type: none;
   position:absolute;
   z-index:1000;
-  background-color:#010203;
-  padding:1rem;
-  width:10rem;
+  top:1rem;
+  left:-20px;
+  background:#0a354f;
+  text-align:start;
+  /* padding:0rem 1rem 1rem 1rem;  */
+  width:12rem;
 }
-
+nav ul.menu li.menu-items ul.dropdown.show{
+  display:block;
+}
+nav ul.menu li.menu-items ul.show li.menu-items{
+  margin-right:0rem;
+  width:100%;
+  padding:.5rem;
+  margin-bottom:0rem !important;
+}
+nav ul.menu li.menu-items ul.show li.menu-items a{
+  width:100%;
+}
+nav ul.menu li.menu-items ul.show li.menu-items:hover{
+  color:#fff;
+  background-color:#010203;
+}
+nav ul.menu li.menu-items ul.click{
+display:none;
+}
 nav a {
   color: #fafafa;
   margin-right: 2rem;
@@ -97,7 +129,7 @@ nav .contactButton:hover a {
   font-size:.75rem;
 } */
 .MuiTypography-h1.caseStudyHeads{
-  font-size: clamp(1.953rem, -3.11rem + 7.38vw, 3.768rem);
+  font-size: clamp(1.953rem, -3.11rem + 7.38vw, 3.768rem) !important;
 }
 .MuiTypography-h1.display {
   font-size: clamp(1.602rem, -3.11rem + 7.38vw, 3.052rem);

@@ -6,6 +6,7 @@ import myTheme from '../styles/theme/mytheme.js';
 import lightThemeTheme from '../styles/theme/lightTheme.js';
 import lightTheme from '../styles/theme/lightTheme.js';
 
+
 export default function MyApp({ Component, pageProps }) {
   return (
     <Layout>

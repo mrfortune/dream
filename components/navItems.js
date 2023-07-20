@@ -17,29 +17,19 @@ export const navItems = [
       submenu: [
         {
           id: "1",
-          name: "ObGYN", 
+          name: "OBGYN", 
          path: "/" 
         },
         {
           id: "2",
-      name: "Home", 
+      name: "Limb Salvage", 
      path: "/" 
         },
         {
           id: "3",
-      name: "Home", 
+      name: "Bariatric", 
      path: "/" 
-        },
-        {
-          id: "4",
-      name: "Home", 
-     path: "/" 
-        },
-        {
-          id: "5",
-      name: "Home", 
-     path: "/" 
-        },
+        }
       ],
     },
     {

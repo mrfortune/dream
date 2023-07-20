@@ -3,11 +3,17 @@ import Dropdown from './Dropdown'
 import Link from 'next/link'
 import Box from '@mui/material/Box';
 import { useState } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faMagnifyingGlass,
+  faCircleStop,
+  faSolid, faCaretDown
+} from "@fortawesome/free-solid-svg-icons";
+
 
 const MenuItems = ({ items }) => {
     const [click, setClick] = useState(false);
     const [dropdown, setDropdown] = useState(false);
-    //const [anchorEl, setAnchorEl] = React.useState(null);
     const handleClick = () => setClick(!click);
     const closeMobilemenu = () => setClick(false);
 
@@ -27,19 +33,18 @@ const MenuItems = ({ items }) => {
         }
     };
     return (
-
         <Box component="li" 
         onMouseEnter={onMouseEnter}
-         onMouseleave={onMouseLeave}
-            className="menu-items" sx={{ marginRight: '1.5rem' }}>
+        onMouseLeave={onMouseLeave}
+        className={click ? 'menu-items active' : 'menu-items'}
+       >
             {items.submenu ? (
                 <>
                     <Link
                         href={items.path}
-                        onClick={closeMobilemenu}
                     >
                         {items.name}{' '}
-                    </Link>
+                        <FontAwesomeIcon icon={faCaretDown} style={{color: "#edeff3", marginLeft:'.5rem'}} /></Link>
                     <Dropdown
                         submenus={items.submenu}
                         dropdown={dropdown}

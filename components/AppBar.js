@@ -106,29 +106,19 @@ export const navItems = [
     submenu: [
       {
         id: "1",
-        name: "ObGYN", 
+        name: "OBGYN", 
        path: "/" 
       },
       {
         id: "2",
-    name: "Home", 
+    name: "Bariatric", 
    path: "/" 
       },
       {
         id: "3",
-    name: "Home", 
+    name: "Limb Salvage", 
    path: "/" 
-      },
-      {
-        id: "4",
-    name: "Home", 
-   path: "/" 
-      },
-      {
-        id: "5",
-    name: "Home", 
-   path: "/" 
-      },
+      }
     ],
   },
   {
@@ -153,27 +143,8 @@ export default function DrawerAppBar (props) {
   const handleDrawerToggle = () => {
     setMobileOpen((prevState) => !prevState);
   };
-  const [click, setClick] = useState(false);
-  const [dropdown, setDropdown] = useState(false);
-  //const [anchorEl, setAnchorEl] = React.useState(null);
-  const handleClick = () => setClick(!click);
-  const closeMobilemenu = () => setClick(false);
 
-  const onMouseEnter = () => {
-      if (window.innerwidth < 960) {
-          setDropdown(false);
-      } else {
-          setDropdown(true)
-      }
-  };
-
-  const onMouseLeave = () => {
-      if (window.innerwidth < 960) {
-          setDropdown(false);
-      } else {
-          setDropdown(false)
-      }
-  };
+  // const closeMobilemenu = () => setClick(false);
   //const { asPath: currentPath } = useRouter();
   const drawer = (
     <Box onClick={handleDrawerToggle} sx={{ textAlign: 'left' }}>
@@ -184,9 +155,7 @@ export default function DrawerAppBar (props) {
               //   {link.name}
               // </Link>
               <ul className="menus" key={id}>
-             
                  <MenuItems items={menu} key={id}/>
-        
             </ul>
           );
         })}
@@ -248,7 +217,7 @@ export default function DrawerAppBar (props) {
             Dream Medical
           </Typography>
           <Box alignItems="center" sx={{ display: { xs: 'none', sm: 'none', md:'flex', xl:'flex', lg:'flex' } }}>
-          <Box component="ul" className={click ? 'menus active' : 'menus'} sx={{display:'flex', flexDirection:'row'}}>
+          <Box component="ul" className="menu">
         {navItems.map((menu, id) => {
           return <MenuItems items={menu} key={id} />;
         })}
