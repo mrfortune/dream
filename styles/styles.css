@@ -37,6 +37,18 @@ nav a:hover {
 nav {
   display: flex;
 }
+nav ul.menus li.menu-items{
+  list-style-type: none;
+}
+nav ul.menus li.menu-items ul.dropdown{
+  display:none;
+  position:absolute;
+  z-index:1000;
+  background-color:#010203;
+  padding:1rem;
+  width:10rem;
+}
+
 nav a {
   color: #fafafa;
   margin-right: 2rem;

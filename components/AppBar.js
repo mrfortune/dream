@@ -14,8 +14,9 @@ import { transform } from 'framer-motion';
 import { useRouter } from 'next/router'
 import myLoader from "../components/Loader";
 import Image from "next/image";
-import { navItems } from './navItems';
+//import { navItems } from './navItems';
 import MenuItems from './MenuItems';
+import { useState } from "react";
 // interface Props {
 //   /**
 //    * Injected by the documentation to work in an iframe.
@@ -26,7 +27,67 @@ import MenuItems from './MenuItems';
 
 const drawerWidth = 240;
 //const navItems = ['home', 'story', 'media', 'contact'];
-const navLinks = [
+// const navLinks = [
+//   { 
+//     id: "1",
+//     name: "Home", 
+//    path: "/" 
+//   },
+//   {
+//     id: "2",
+//     name: "About",
+//     path: "/about",
+   
+//   },
+//   {
+//     id: "3",
+//     name: "Devices",
+//     path: "/devices", 
+//     submenu: [
+//       {
+//         id: "1",
+//         name: "Home", 
+//        path: "/" 
+//       },
+//       {
+//         id: "2",
+//     name: "Home", 
+//    path: "/" 
+//       },
+//       {
+//         id: "3",
+//     name: "Home", 
+//    path: "/" 
+//       },
+//       {
+//         id: "4",
+//     name: "Home", 
+//    path: "/" 
+//       },
+//       {
+//         id: "5",
+//     name: "Home", 
+//    path: "/" 
+//       },
+//     ],
+//   },
+//   {
+//     id: "4",
+//     name: "Products",
+//     path: "/products",
+//   },
+//   {
+//     id: "5",
+//     name: "Services",
+//     path: "/services",
+//   },
+//   {
+//     id: "6",
+//     name: "Contact",
+//     path: "/contact",
+//   },
+// ];
+export const navItems = [
   { 
     id: "1",
     name: "Home", 
@@ -45,7 +106,7 @@ const navLinks = [
     submenu: [
       {
         id: "1",
-        name: "Home", 
+        name: "ObGYN", 
        path: "/" 
       },
       {
@@ -86,23 +147,47 @@ const navLinks = [
     path: "/contact",
   },
 ];
-
 export default function DrawerAppBar (props) {
   const { window } = props;
   const [mobileOpen, setMobileOpen] = React.useState(false);
-
   const handleDrawerToggle = () => {
     setMobileOpen((prevState) => !prevState);
+  };
+  const [click, setClick] = useState(false);
+  const [dropdown, setDropdown] = useState(false);
+  //const [anchorEl, setAnchorEl] = React.useState(null);
+  const handleClick = () => setClick(!click);
+  const closeMobilemenu = () => setClick(false);
+
+  const onMouseEnter = () => {
+      if (window.innerwidth < 960) {
+          setDropdown(false);
+      } else {
+          setDropdown(true)
+      }
+  };
+
+  const onMouseLeave = () => {
+      if (window.innerwidth < 960) {
+          setDropdown(false);
+      } else {
+          setDropdown(false)
+      }
   };
   //const { asPath: currentPath } = useRouter();
   const drawer = (
     <Box onClick={handleDrawerToggle} sx={{ textAlign: 'left' }}>
       <Box sx={{ display:'flex', flexDirection:'column', paddingLeft:'1rem', paddingTop:'1rem' }}>
-            {navLinks.map((link, id) => {
+            {navItems.map((menu, id) => {
           return(
-              <Link key={id} href={link.path} css={{marginBottom:'1rem'}}>
-                {link.name}
-              </Link>
+              // <Link key={id} href={link.path} css={{marginBottom:'1rem'}}>
+              //   {link.name}
+              // </Link>
+              <ul className="menus" key={id}>
+             
+                 <MenuItems items={menu} key={id}/>
+        
+            </ul>
           );
         })}
           </Box>
@@ -163,7 +248,12 @@ export default function DrawerAppBar (props) {
             Dream Medical
           </Typography>
           <Box alignItems="center" sx={{ display: { xs: 'none', sm: 'none', md:'flex', xl:'flex', lg:'flex' } }}>
-            {navItems.map((link, id) => {
+          <Box component="ul" className={click ? 'menus active' : 'menus'} sx={{display:'flex', flexDirection:'row'}}>
+        {navItems.map((menu, id) => {
+          return <MenuItems items={menu} key={id} />;
+        })}
+      </Box>
+            {/* {navItems.map((link, id) => {
               const selectedNavItem = "Contact";
               if (link.name != "Contact"){
                 return(
@@ -197,7 +287,7 @@ export default function DrawerAppBar (props) {
           </Button> );
               }
            
-        })}
+        })} */}
        
           </Box>
         </Toolbar>

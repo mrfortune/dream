@@ -1,15 +1,17 @@
 import React from 'react'
 import Link from 'next/link'
+import Box from '@mui/material/Box'
 
-const dropdown = ({submenus}) => {
+const dropdown = ({submenus, dropdown }) => {
   return (
-    <ul className="dropdown">
-      {submenus.map((submenu, index) => (
-        <li key={index} className="menu-items">
-          <Link href={submenu.url}>{submenu.title}</Link>
+    <Box component="ul" className={`dropdown ${dropdown ? "show" : ""}`}>
+      {submenus.map((submenu, id) => (
+        <li key={id} className="menu-items">
+          <Link href={submenu.path}>{submenu.name}</Link>
         </li>
+        
       ))}
-    </ul>
+    </Box>
   )
 }
 

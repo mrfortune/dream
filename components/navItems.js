@@ -17,7 +17,7 @@ export const navItems = [
       submenu: [
         {
           id: "1",
-          name: "Home", 
+          name: "ObGYN", 
          path: "/" 
         },
         {
