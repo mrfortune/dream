@@ -23,10 +23,10 @@ body {
 }
 nav a.active {
   font-weight: 500;
-  color: #4991e3;
+  color: #004000;
 }
 nav a:hover {
-  color: #4991e3;
+  color: #004000;
   -webkit-transition: color 1s; /* For Safari 3.0 to 6.0 */
   transition: color 1s; /* For modern browsers */
 }
@@ -42,9 +42,12 @@ nav ul.menu{
   list-style-type: none;
 }
 nav ul.menu li.menu-items{
- 
   margin-right:1.2rem; 
   position:relative;
+  margin-bottom:0px;
+}
+nav ul.menu li.menu-items:hover{
+background-color:#648C07;
 }
 nav ul.menu li.menu-items.click{
   display:block;
@@ -57,10 +60,10 @@ nav ul.menu li.menu-items ul.dropdown{
   z-index:1000;
   top:1rem;
   left:-20px;
-  background:#0a354f;
+  background:#648C07;
   text-align:start;
   /* padding:0rem 1rem 1rem 1rem;  */
-  width:12rem;
+  width:10rem;
 }
 nav ul.menu li.menu-items ul.dropdown.show{
   display:block;
@@ -74,15 +77,18 @@ nav ul.menu li.menu-items ul.show li.menu-items{
 nav ul.menu li.menu-items ul.show li.menu-items a{
   width:100%;
 }
+nav ul.menu li.menu-items ul.show li.menu-items a:hover{
+color:#00CC00;
+}
 nav ul.menu li.menu-items ul.show li.menu-items:hover{
-  color:#fff;
-  background-color:#010203;
+  color:#F0EFE4;
+  background-color:#004000;
 }
 nav ul.menu li.menu-items ul.click{
 display:none;
 }
 nav a {
-  color: #fafafa;
+  color: #F0EFE4;
   margin-right: 2rem;
   text-transform: capitalize;
   font-weight: 500;
@@ -188,7 +194,7 @@ width:63%
                 var(--color-two),
                 var(--color-one)
               ) 0 0 / var(--bg-size) 100%; */
-  color: #07e9eb;
+  color: #006600;
   /* background-clip: text; */
   /* -webkit-background-clip: text; */
   /* animation: move-bg 8s infinite linear; */
@@ -286,7 +292,7 @@ a {
   );
 }
 nav .MuiToolbar-root {
-  min-height: 5rem;
+  min-height: 4rem;
 }
 .lineClamp {
   display: -webkit-box;
@@ -418,8 +424,8 @@ ul.mylistStyle li {
 }
 .homeHero {
   /*background-image: url("/assets/Desktop1920_bg.png");*/
-  background: linear-gradient(-45deg, #010203, #202a33, #1a354f, #030201);
-  animation: herogradient 15s ease infinite;
+  background: rgb(224,224,224);
+background: linear-gradient(180deg, rgba(224,224,224,1) 0%, rgba(240,239,228,1) 52%);
   position: relative;
   height: 100vh;
   width: 100%;

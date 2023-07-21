@@ -67,7 +67,7 @@ export default function Home() {
               </Text>
               <Text
                 className="headerBody"
-                color="#fafafa"
+                color="primary"
                 css={{
                   fontWeight: "400",
                   marginBottom:"$6",

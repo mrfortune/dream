@@ -7,10 +7,10 @@ const lightTheme = createTheme({
   },
   palette: {
     primary: {
-       main: '#010203',
+       main: '#008000',
     },
     secondary: {
-      main: '#0738F5',
+      main: '#648C07',
     },
     // nav:{
     //   color:'#fafafa',

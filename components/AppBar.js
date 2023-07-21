@@ -170,7 +170,7 @@ export default function DrawerAppBar (props) {
   return (
     <Box sx={{ display: 'flex' }}>
       <CssBaseline />
-      <AppBar component="nav" sx={{minHeight:'5rem', backgroundColor:'#0a354f'}}>
+      <AppBar component="nav" sx={{minHeight:'4rem', backgroundColor:'#648C07'}}>
         <Toolbar> 
         <Box sx={{ flexGrow: 1, }}>
 <Typography
@@ -203,7 +203,7 @@ export default function DrawerAppBar (props) {
             aria-label="open drawer"
             edge="start"
             onClick={handleDrawerToggle}
-            sx={{ mr: 0,  borderRadius:'50%', backgroundColor:'#0469de',
+            sx={{ mr: 0,  borderRadius:'50%', backgroundColor:'#648C07',
             display: { xs:'flex', sm: 'flex', md: 'none', horizontal: 'right' }, }}
           >
             <MenuIcon />
