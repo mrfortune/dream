@@ -169,3 +169,27 @@
   padding-top: 40vh;
   text-shadow: 1px 1px 1px #3c5c5e;
 }
+.heroWrapper {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+}
+.heroWrapper .imageWrapper {
+  z-index: -1;
+}
+
+.heroWrapper .heroContent {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  padding:2rem 1rem;
+  top:50%;
+}
+.heroWrapper .heroContent div{
+    width:60vw;
+    height:auto;
+}
+.heroWrapper .heroContent div h1{
+  font-weight:900;
+}

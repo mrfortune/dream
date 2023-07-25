@@ -17,6 +17,7 @@ const nextConfig = {
   images: {
     loader:'imgix',
     path:'https://worldshaker.imgix.net/',
+    unoptimized: true 
   }, 
   distDir: 'build',
   webpack: (

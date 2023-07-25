@@ -20,7 +20,12 @@ import {
   import Chip from "@mui/material/Chip";
   import { textAlign } from "@mui/system";
   import myLoader from "../components/Loader";
+  
+const { heroContent, heroWrapper, imageWrapper } = styles;
+const IMAGE_URL = 'https://www.dreammedical.info/assets/doctor.png';
+
 export default function Home() {
+
   return (
     <div className={styles.container}>
       <Head>
@@ -28,18 +33,18 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main>
-      <Box
+      {/* <main> */}
+      {/* <Box
         component="section"
-        className="homeHero"
+        // className="homeHero"
         padding={0}
         direction="column"
         display="flex"
         alignItems="center"
         justifyContent="center"
         sx={{ width: "100%" }}
-      >
-        <Box
+      > */}
+        {/* <Box
           className="heroText"
           component="div"
           maxWidth="lg"
@@ -55,15 +60,43 @@ export default function Home() {
             height: "auto",
             width: "100%",
           }}
-        >
-          <Grid  container spacing={2} mt={2} sx={{ maxWidth: "lg" }}>
+        > */}
+<Box component="section" className={heroWrapper}>
+      <Box component="div" className={imageWrapper}>
+        <Image
+          priority
+          src={IMAGE_URL}
+          layout="fill"
+          objectFit="cover"
+          objectPosition="center"
+          alt="hero image example"
+        />
+      </Box>
+
+      <Box component="div" className={heroContent}>
+        <Box component="div">
+           <Typography variant="h1">Revolutionizing Medical Practices with Advanced Devices and Expertise</Typography>
+        <Typography variant="body1">Equip Your Skills with High-Performance Medical Devices Designed for Precision and Excellence.</Typography>
+        <Button size="lg" color="secondary" css={{ borderRadius: "$2xl" }} >
+                <Link
+                  href="/contact"
+                  css={{ color: "primaryLinkText", fontSize: '$sm', fontWeight:"$normal" }}
+                >
+                  Learn more...
+                </Link>
+              </Button>
+        </Box>
+       
+      </Box>
+    </Box>
+          {/* <Grid  container spacing={2} mt={2} sx={{ maxWidth: "lg" }}>
             <Grid item xs={12} sm={12} md={7} lg={7} xl={7} pt={10}>
               <Text h1 className="boujee-text"  css={{
                   marginBottom:"$6",
                   marginTop:"$10",
                   
                 }}>
-                <span>Impactful</span><br></br> Digital Business <span><br></br>Transformation</span>
+                <span>Revolutionizing Medical Practices with Advanced Devices and Expertise</span>
               </Text>
               <Text
                 className="headerBody"
@@ -74,7 +107,7 @@ export default function Home() {
                   textAlign:'left'
                 }}
               >
-                Identifying the right problems through user research methodologies to design and deliver human-centered solutions.
+                Equip Your Skills with High-Performance Medical Devices Designed for Precision and Excellence.
               </Text>
               
               <Box component="div" sx={{ display: {xs:"block", sm:"block", md:"none", lg:"none", xl:"none"} }}>
@@ -84,15 +117,7 @@ export default function Home() {
                       viewport={{ once: true }}
                       transition={{ duration: 1 }}
                     >
- <Image
-                src="assets/blackLadyexec3.png"
-                width={300}
-                height={300}
-                alt="Black Lady Exec" 
-                loader={myLoader}
-                blurDataURL="/assets/blur-image.jpg"
-   placeholder="blur"
-              ></Image>
+ 
               </motion.div>
               </Box>
              <Box component="div" display="flex" sx={{justifyContent:{xs:"center", sm:"center", md:"left", lg:"left", xl:"left"}}}>
@@ -107,26 +132,11 @@ export default function Home() {
              </Box>
              
             </Grid>
-            <Grid item xs={12} sm={12} md={5} lg={5} xl={5} sx={{ display: {xs:"none", sm:"none", md:"block", lg:"block", xl:"block"} }}>
-            <motion.div
-                      initial={{ opacity: 0 }}
-                      whileInView={{ opacity: 1 }}
-                      viewport={{ once: true }}
-                      transition={{ duration: 1 }}
-                    ><Image
-                src="assets/blackLadyexec3.png"
-                width={400}
-                height={400}
-                alt="Black Lady Exec"
-                loader={myLoader}
-               
-              ></Image>
-              </motion.div>
-            </Grid>
             
-          </Grid>
-        </Box>
-      </Box>
+            
+          </Grid> */}
+        {/* </Box>
+      </Box> */}
     
       <Box
         className="homePage"
@@ -221,7 +231,7 @@ export default function Home() {
         <Grid container sx={{ maxWidth: "lg" }} spacing={2}>
           <Grid item xs={12} sm={12} md={12} lg={12} xl={12} mt={8}>
             <Typography variant="h2" sx={{ color: "#333", textAlign: "center" }}>
-              Case Studies
+              Research Papers
             </Typography>
           </Grid>
           <Grid item xs={12} sm={12} md={12} lg={12} xl={12} mb={10}>
@@ -240,12 +250,10 @@ export default function Home() {
                 <Box component="div" display="flex" flexDirection="row" >
                   <Box component="div" width="50vw">
                     <Typography variant="h3">
-                    Westside German Shepherd Rescue
+                    Limb Salvage Amnion Chorion Tissue
                   </Typography>
                     <Typography variant="body1">
-                      Read our case study on how we came up with a new design
-                      for the very outdated look of sheprescue.org and improved
-                      the look and user experience for their site.
+                    Amniotic and chorionic tissues, collectively referred to as amniotic membrane, have become increasingly popular as a treatment option for limb salvage in wound care. These tissues have been used for many years in surgical ...
                     </Typography>
                     <Button
                       size="sm"
@@ -253,7 +261,7 @@ export default function Home() {
                       css={{ borderRadius: "$xl" }}
                     >
                       <Link
-                        href="/west-side-german-shepherd"
+                        href="/assets/A_Multicenter_Randomized_Controlled_Clinical.39.pdf"
                         css={{ color: "primaryLinkText", fontSize: "$sm" }}
                       >
                         Read more...
@@ -275,7 +283,6 @@ export default function Home() {
                         layout="responsive"
                         alt="West-Side German Shepherd Rescue"
                       >
-
                       </Image>
                     </motion.div>
                   </Box>
@@ -315,13 +322,10 @@ export default function Home() {
                   </Box>
                   <Box component="div" width="50vw"> 
                   <Typography variant="h3">
-                    Fade Technology Solutions
+                  Dehydrated Human Amnion Chorion Human Allograft Tissue (dHACA) for Spine Surgery
                   </Typography>
                     <Typography variant="body1">
-                      Fade Technology Solutions needed a dashboard solution
-                      designed to manage their campaigns, users, brands, and
-                      agencies. Read about our process and see what we came up
-                      with.
+                    dHACA tissue reduces Epidural Fibrosis, and can be used for a tears of the Dura (Durotomy).
                     </Typography>
                     <Button
                       size="sm"
@@ -352,25 +356,21 @@ export default function Home() {
                 </Box>
                 <Box component="div" display="flex" flexDirection="row" >
                   <Box component="div" width="50vw">   
-                  <Typography variant="h3">The Winery, Brooklyn</Typography>
+                  <Typography variant="h3">dHACA Tissue for Urology Procedures</Typography>
                     <Typography variant="body1">
-                      The Winery, Brooklyn is opening a new wine store in the
-                      Prospect Leffertys-Gardens area of Brooklyn and needs a
-                      website for that location. We worked with the team to
-                      design the new site. Read on to learn our who, what,
-                      where, and why.
+                    Amnion-scaffolds in tissue engineered constructs for
+reconstructive urology.
                     </Typography>
                     <Button
                       size="sm"
-                      css={{ borderRadius: "$xl", backgroundColor:'#ccc' }}
-                      disabled
+                      color="secondary"
+                      css={{ borderRadius: "$xl" }}
                     >
                       <Link
-                      className="disabledBtn"
-                        href="/"
-                        css={{ color: "#333", fontSize: "$sm" }}
+                        href="./assets/A_Multicenter_Randomized_Controlled_Clinical.39.pdf"
+                        css={{ color: "primaryLinkText", fontSize: "$sm" }}
                       >
-                       Coming soon...
+                        Read more...
                       </Link>
                     </Button>
                   </Box>
@@ -395,7 +395,7 @@ export default function Home() {
           </Grid>
         </Grid>
       </Box>  
-      </main>
+      {/* </main> */}
 
       {/* <footer>
         <a

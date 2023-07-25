@@ -7,7 +7,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faMagnifyingGlass,
   faCircleStop,
-  faSolid, faCaretDown
+  faSolid, faCaretDown, faChevronDown
 } from "@fortawesome/free-solid-svg-icons";
 
 
@@ -44,7 +44,7 @@ const MenuItems = ({ items }) => {
                         href={items.path}
                     >
                         {items.name}{' '}
-                        <FontAwesomeIcon icon={faCaretDown} style={{color: "#edeff3", marginLeft:'.5rem'}} /></Link>
+                        <FontAwesomeIcon icon={faChevronDown}  style={{color: "#edeff3", marginLeft:'.5rem'}} /></Link>
                     <Dropdown
                         submenus={items.submenu}
                         dropdown={dropdown}

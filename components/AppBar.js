@@ -101,12 +101,12 @@ export const navItems = [
   },
   {
     id: "3",
-    name: "Devices",
-    path: "/devices", 
+    name: "Products",
+    path: "/products", 
     submenu: [
       {
         id: "1",
-        name: "OBGYN", 
+        name: "OBGYN/UROBGYN", 
        path: "/" 
       },
       {
@@ -118,13 +118,53 @@ export const navItems = [
         id: "3",
     name: "Limb Salvage", 
    path: "/" 
+      },
+      {
+        id: "4",
+    name: "Orthopedic", 
+   path: "/" 
+      },
+      {
+        id: "5",
+    name: "Neuro Spine", 
+   path: "/" 
+      },
+      {
+        id: "6",
+    name: "Urology", 
+   path: "/" 
+      },
+      {
+        id: "7",
+    name: "Vascular Surgery", 
+   path: "/" 
+      },
+      {
+        id: "8",
+    name: "Wound Care & Limb Care", 
+   path: "/" 
+      },
+      {
+        id: "9",
+    name: "Breast Reconstruction", 
+   path: "/" 
+      },
+      {
+        id: "10",
+    name: "ENT", 
+   path: "/" 
+      },
+      {
+        id: "11",
+    name: "Podiatry", 
+   path: "/" 
+      },
+      {
+        id: "11",
+    name: "General Surgery", 
+   path: "/" 
       }
     ],
-  },
-  {
-    id: "4",
-    name: "Products",
-    path: "/products",
   },
   {
     id: "5",
@@ -147,7 +187,7 @@ export default function DrawerAppBar (props) {
   // const closeMobilemenu = () => setClick(false);
   //const { asPath: currentPath } = useRouter();
   const drawer = (
-    <Box onClick={handleDrawerToggle} sx={{ textAlign: 'left' }}>
+    <Box onClick={handleDrawerToggle} sx={{ textAlign: 'left', backgroundColor:'#4CBB17' }}>
       <Box sx={{ display:'flex', flexDirection:'column', paddingLeft:'1rem', paddingTop:'1rem' }}>
             {navItems.map((menu, id) => {
           return(
@@ -170,7 +210,7 @@ export default function DrawerAppBar (props) {
   return (
     <Box sx={{ display: 'flex' }}>
       <CssBaseline />
-      <AppBar component="nav" sx={{minHeight:'4rem', backgroundColor:'#648C07'}}>
+      <AppBar component="nav" sx={{minHeight:'4rem', backgroundColor:'#4CBB17'}}>
         <Toolbar> 
         <Box sx={{ flexGrow: 1, }}>
 <Typography
@@ -190,8 +230,8 @@ export default function DrawerAppBar (props) {
           >
           <Image 
           loader={myLoader}
-          src="assets/wslogo8.png"
-          width={200} height={24} 
+          src="assets/dmlogo.png"
+          width={80} height={40}
           alt="Logo">
 
           </Image>
@@ -203,7 +243,7 @@ export default function DrawerAppBar (props) {
             aria-label="open drawer"
             edge="start"
             onClick={handleDrawerToggle}
-            sx={{ mr: 0,  borderRadius:'50%', backgroundColor:'#648C07',
+            sx={{ mr: 0,  borderRadius:'50%', backgroundColor:'#004000',
             display: { xs:'flex', sm: 'flex', md: 'none', horizontal: 'right' }, }}
           >
             <MenuIcon />
@@ -267,13 +307,14 @@ export default function DrawerAppBar (props) {
           container={container}
           variant="temporary"
           open={mobileOpen}
+          backgroundColor="#4CBB17"
           onClose={handleDrawerToggle}
           ModalProps={{
             keepMounted: true, // Better open performance on mobile.
           }}
           sx={{
              display: { xs: 'block', sm: 'block', md:'none', lg:'none', xl:'none'  },
-            '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth  },
+            '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth, backgroundColor:'#4CBB17'  },
           }}
         >
           {drawer}

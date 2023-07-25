@@ -23,10 +23,10 @@ body {
 }
 nav a.active {
   font-weight: 500;
-  color: #004000;
+  color: #0D0D0D;
 }
 nav a:hover {
-  color: #004000;
+  color: #0D0D0D;
   -webkit-transition: color 1s; /* For Safari 3.0 to 6.0 */
   transition: color 1s; /* For modern browsers */
 }
@@ -47,7 +47,7 @@ nav ul.menu li.menu-items{
   margin-bottom:0px;
 }
 nav ul.menu li.menu-items:hover{
-background-color:#648C07;
+background-color:#4CBB17;
 }
 nav ul.menu li.menu-items.click{
   display:block;
@@ -58,9 +58,9 @@ nav ul.menu li.menu-items ul.dropdown{
   list-style-type: none;
   position:absolute;
   z-index:1000;
-  top:1rem;
+  top:2rem;
   left:-20px;
-  background:#648C07;
+  background:#4CBB17;
   text-align:start;
   /* padding:0rem 1rem 1rem 1rem;  */
   width:10rem;
@@ -81,14 +81,14 @@ nav ul.menu li.menu-items ul.show li.menu-items a:hover{
 color:#00CC00;
 }
 nav ul.menu li.menu-items ul.show li.menu-items:hover{
-  color:#F0EFE4;
+  color:#0D0D0D;
   background-color:#004000;
 }
 nav ul.menu li.menu-items ul.click{
 display:none;
 }
 nav a {
-  color: #F0EFE4;
+  color: #0D0D0D;
   margin-right: 2rem;
   text-transform: capitalize;
   font-weight: 500;
@@ -123,6 +123,12 @@ nav .contactButton:hover a {
 .drawer {
   display: flex;
   flex-direction: column;
+}
+.MuiDrawer-paper{
+  background-color:#4CBB17;
+}
+.MuiDrawer-paper ul li a{
+  color:#0D0D0D;
 }
 .drawer a {
   margin-bottom: 0.5rem;
@@ -183,7 +189,7 @@ width:63%
   max-width: 20rem;
 }
 .homeHero .heroText h1.boujee-text {
-  font-size: clamp(1.953rem, -3.11rem + 7.38vw, 4.768rem);
+  font-size: clamp(1.953rem, -3.11rem + 7.38vw, 3.768rem);
   /* --bg-size: 400%;
   --color-one: hsl(200 19% 18%);
   --color-two: hsl(212 96% 44%);
@@ -194,7 +200,7 @@ width:63%
                 var(--color-two),
                 var(--color-one)
               ) 0 0 / var(--bg-size) 100%; */
-  color: #006600;
+  color: #41186E;
   /* background-clip: text; */
   /* -webkit-background-clip: text; */
   /* animation: move-bg 8s infinite linear; */
@@ -202,10 +208,10 @@ width:63%
   text-transform: uppercase;
   letter-spacing: 1px;
 }
-.homeHero .heroText h1.boujee-text span {
-  text-decoration: underline;
-  font-weight: 300;
+.homeHero .heroText h1.boujee-text {
+  font-weight: 900;
 }
+
 .headerBody {
   font-size: clamp(1rem, -3.11rem + 7.38vw, 1rem);
   /* background-image: linear-gradient(to bottom, #CBCBCB, #FF5B19); */
@@ -423,16 +429,14 @@ ul.mylistStyle li {
   border: 1px solid #ccc;
 }
 .homeHero {
-  /*background-image: url("/assets/Desktop1920_bg.png");*/
   background: rgb(224,224,224);
 background: linear-gradient(180deg, rgba(224,224,224,1) 0%, rgba(240,239,228,1) 52%);
-  position: relative;
-  height: 100vh;
-  width: 100%;
+  /* position: relative; */
+  height: 1080px;
+  width: 100vw;
+  background-image: url(../public/assets/doctor.png);
   min-height: calc(100vh - 4rem);
-  background-size: 400% 400%;
-  /* background: rgb(242,242,242);
-  background: linear-gradient(177deg, rgba(242,242,242,1) 0%, rgba(232,232,232,1) 48%, rgba(219,219,219,1) 100%); */
+  background-size:cover;
   background-repeat: no-repeat;
   background-position: center center;
   transition: all 0.5s ease;
@@ -554,10 +558,12 @@ ul.ulStyle li {
 /* footer .MuiGrid-item{
   padding-left:0px;
 } */
-.MuiIconButton-root:hover {
-  background-color: #3687e4;
+.MuiIconButton-root{
+  background-color: #004000;
 }
-
+.MuiIconButton-root:hover{
+  background-color: #008C00;
+}
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (min-width: 0px) and (max-width: 600px) {
   .homeHero {
