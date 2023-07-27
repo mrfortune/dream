@@ -20,6 +20,7 @@ import {
   import Chip from "@mui/material/Chip";
   import { textAlign } from "@mui/system";
   import myLoader from "../components/Loader";
+  import MyButton from '../components/MyButton';
   
 const { heroContent, heroWrapper, imageWrapper } = styles;
 const IMAGE_URL = 'https://www.dreammedical.info/assets/doctor.png';
@@ -65,26 +66,33 @@ export default function Home() {
       <Box component="div" className={imageWrapper}>
         <Image
           priority
-          src={IMAGE_URL}
-          layout="fill"
-          objectFit="cover"
+          src="assets/doctor.png"
+           layout="fill"
+           objectFit="cover"
+          // width="2536"
+          // height="720"
           objectPosition="center"
           alt="hero image example"
+          grid="1/-1"
         />
       </Box>
 
-      <Box component="div" className={heroContent}>
-        <Box component="div">
-           <Typography variant="h1">Revolutionizing Medical Practices with Advanced Devices and Expertise</Typography>
-        <Typography variant="body1">Equip Your Skills with High-Performance Medical Devices Designed for Precision and Excellence.</Typography>
-        <Button size="lg" color="secondary" css={{ borderRadius: "$2xl" }} >
-                <Link
-                  href="/contact"
-                  css={{ color: "primaryLinkText", fontSize: '$sm', fontWeight:"$normal" }}
-                >
-                  Learn more...
-                </Link>
-              </Button>
+      <Box component="div"  className={heroContent}>
+        <Box component="div" maxWidth='xl'>
+           <Typography variant="h1">Revolutionizing <br></br>Medical Practices<br></br> with Advanced <br></br>Devices and Expertise</Typography>
+        <Typography variant="body1">Equip Your Skills with High-Performance<br></br> Medical Devices Designed for Precision and Excellence.</Typography>
+        <Button
+                      size="lg"
+                      color="secondary"
+                      css={{ borderRadius: "$xl" }}
+                    >
+                      <Link
+                        href="/assets/A_Multicenter_Randomized_Controlled_Clinical.39.pdf"
+                        css={{ color:'$green900', fontSize: "$lg" }}
+                      >
+                        Read more...
+                      </Link>
+                    </Button>
         </Box>
        
       </Box>
@@ -139,19 +147,18 @@ export default function Home() {
       </Box> */}
     
       <Box
-        className="homePage"
+        className="whatwedo"
         direction="row"
-        display="flex"
+        display="grid"
         justifyContent="center"
         component="section"
-        id="whatWeDo"
         sx={{
-          backgroundColor: "#f9f9f9",
+          backgroundColor: "#C7C60E",
           paddingTop: "3rem",
           paddingBottom: "3rem",
         }}
       >
-        <Grid container sx={{ maxWidth: "lg", marginTop: "0" }} spacing={2}>
+        <Grid container sx={{ maxWidth: "xl", marginTop: "0" }} spacing={2}>
         <Grid item xs={12} sm={12} md={12} lg={12} xl={12} pt={0}>
           <Typography variant="h2" sx={{textAlign:"center"}}> What We Do</Typography>
           </Grid>
@@ -168,7 +175,7 @@ export default function Home() {
               variant="h4"
               sx={{ color: "#333", textAlign: "center" }}
             >
-             Research
+             Products
             </Typography>
             <Typography
               variant="body1"
@@ -187,7 +194,7 @@ export default function Home() {
               variant="h4"
               sx={{ color: "#333", textAlign: "center" }}
             >
-              Design
+              Services
             </Typography>
             <Typography
               variant="body1"
@@ -208,7 +215,7 @@ export default function Home() {
               variant="h4"
               sx={{ color: "#333", textAlign: "center" }}
             >
-              Develop
+              Consultation
             </Typography>
             <Typography
               variant="body1"
@@ -221,14 +228,14 @@ export default function Home() {
         </Grid>
       </Box>
       <Box
-        className="homePage"
+        className="whatwedo"
         direction="row"
-        display="flex"
+        display="grid"
         justifyContent="center"
         component="section"
         sx={{ backgroundColor: "#f1eded" }}
       >
-        <Grid container sx={{ maxWidth: "lg" }} spacing={2}>
+        <Grid container sx={{ maxWidth: "xl" }} spacing={2}>
           <Grid item xs={12} sm={12} md={12} lg={12} xl={12} mt={8}>
             <Typography variant="h2" sx={{ color: "#333", textAlign: "center" }}>
               Research Papers
@@ -276,12 +283,11 @@ export default function Home() {
                       transition={{ duration: 1 }}
                     >
                       <Image
-                        src="/assets/wgsrBlob2.png"
-                        width={600}
-                        height={600}
+                        src="/assets/limbsalvage.png"
+                        width={400}
+                        height={400}
                         loader={myLoader}
-                        layout="responsive"
-                        alt="West-Side German Shepherd Rescue"
+                        alt="Limb Salvage"
                       >
                       </Image>
                     </motion.div>
@@ -311,11 +317,10 @@ export default function Home() {
                       transition={{ duration: 1 }}
                     >
                       <Image
-                        src="/fadeBlob2.png"
-                        width={600}
-                        height={600}
+                        src="assets/dhaca.png"
+                        width={400}
+                        height={400}
                         alt=""
-                        layout="responsive"
                         loader={myLoader}
                       ></Image>
                     </motion.div>
@@ -382,10 +387,9 @@ reconstructive urology.
                       transition={{ duration: 1 }}
                     >
                       <Image
-                        src="/wineBlob2.png"
-                        width={600}
-                        height={600}
-                        layout="responsive"
+                        src="assets/dhacaurology.png"
+                        width={400}
+                        height={400}
                         loader={myLoader}
                         alt=""
                       ></Image>

@@ -44,7 +44,7 @@ const MenuItems = ({ items }) => {
                         href={items.path}
                     >
                         {items.name}{' '}
-                        <FontAwesomeIcon icon={faChevronDown}  style={{color: "#edeff3", marginLeft:'.5rem'}} /></Link>
+                        <FontAwesomeIcon icon={faChevronDown}  style={{color:'#4ABA16', marginLeft:'.5rem'}} /></Link>
                     <Dropdown
                         submenus={items.submenu}
                         dropdown={dropdown}

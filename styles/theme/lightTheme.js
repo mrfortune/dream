@@ -10,7 +10,7 @@ const lightTheme = createTheme({
        main: '#4CBB17',
     },
     secondary: {
-      main: '#648C07',
+      main: '#4CBB17',
     },
     // nav:{
     //   color:'#fafafa',

@@ -170,25 +170,64 @@
   text-shadow: 1px 1px 1px #3c5c5e;
 }
 .heroWrapper {
-  position: relative;
+  /* position: relative;
   width: 100vw;
   height: 100vh;
+  display:grid; */
+  display: grid;
+  height: 45rem;
 }
 .heroWrapper .imageWrapper {
-  z-index: -1;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height:45rem;
+    object-fit: cover; 
+    overflow: hidden;
 }
 
 .heroWrapper .heroContent {
-  position: absolute;
+  /* position: absolute;
   display: flex;
-  align-items: center;
-  justify-content: left;
+  flex-direction: column;
+  justify-content: flex-end;
   padding:2rem 1rem;
   top:50%;
+  /* width:100%; *
+  grid-column: 1/2;
+    grid-row: 1/2;
+    grid-area: 1/2; */
+    z-index: 1; /* [1] */
+    grid-area: 1/-1;
+    display: flex;
+    flex-direction: column;
+    margin: auto; /* [2] */
+    text-align: left;
+    width:1536px;
+    color:#eaeaea;
+    /* left: 50%;
+    top: 50%; */
 }
 .heroWrapper .heroContent div{
-    width:60vw;
-    height:auto;
+  position: absolute;
+  /* left: 50%; */
+  top: 20%;
+  z-index: 1;
+  /* transform: translate(-50%, -50%); */
+  text-align: left;
+  width:1536px;
+  padding-left:1rem;
+}
+.heroWrapper .heroContent div .nextui-button-text span a {
+  color: #333;
+  font-size: medium;
+}
+.heroWrapper:after {
+  content: "";
+  /* background-color: #000; */
+  opacity: 0.5;
+  grid-area: 1/-1;
 }
 .heroWrapper .heroContent div h1{
   font-weight:900;

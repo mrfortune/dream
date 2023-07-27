@@ -31,9 +31,9 @@ const FooterNav = () => {
               <Link href="/">
                 <Image
                   loader={myLoader}
-                  src="assets/wslogo8.png"
-                  width={200}
-                  height={24}
+                  src="assets/dmlogo.png"
+                  width={80}
+                  height={40}
                   alt="Logo"
                 >
 
@@ -81,7 +81,7 @@ const FooterNav = () => {
                 flexGrow="1"
                 sx={{ paddingLeft: { sm: "0rem" } }}
               >
-                <Text h4 css={{ color: "#fafafa" }}>
+                <Text h4 css={{ color: "#4CBB17" }}>
                   Company
                 </Text>
                 <Box
@@ -101,7 +101,7 @@ const FooterNav = () => {
                 </Box>
               </Box>
               <Box component="div" flexGrow="1">
-                <Text h4 css={{ color: "#fafafa" }}>
+                <Text h4 css={{ color: "#4CBB17" }}>
                   Resources
                 </Text>
                 <Box
@@ -144,7 +144,7 @@ const FooterNav = () => {
                 </Box>
               </Box>
               <Box component="div" flexGrow="1">
-                <Text h4 css={{ color: "#fafafa" }}>
+                <Text h4 css={{ color: "#4CBB17" }}>
                   Partners
                 </Text>
                 <Box
@@ -171,7 +171,7 @@ const FooterNav = () => {
                 </Box>
               </Box>
               <Box component="div">
-                <Text h4 css={{ color: "#fafafa" }}>
+                <Text h4 css={{ color: "#4CBB17" }}>
                   Legal
                 </Text>
                 <Box

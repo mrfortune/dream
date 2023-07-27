@@ -208,11 +208,15 @@ export default function DrawerAppBar (props) {
   const currentRoute = router.pathname;
 
   return (
-    <Box sx={{ display: 'flex' }}>
-      <CssBaseline />
-      <AppBar component="nav" sx={{minHeight:'4rem', backgroundColor:'#4CBB17'}}>
-        <Toolbar> 
-        <Box sx={{ flexGrow: 1, }}>
+    <Box component ="div" sx={{ display: 'flex' }}>
+      {/* <CssBaseline /> */}
+      <AppBar component="nav" sx={{minHeight:'4rem', backgroundColor:'#333'}}>
+        <Box component="div" display="flex"
+        flexWrap="wrap"
+        justifyContent="center"
+        >
+ <Toolbar sx={{width:"1536px", maxWidth:'xl'}}> 
+       
 <Typography
             variant="h6"
             noWrap
@@ -236,14 +240,14 @@ export default function DrawerAppBar (props) {
 
           </Image>
           </Typography>
-            </Box>
+       
           
           <IconButton
             color="inherit"
             aria-label="open drawer"
             edge="start"
             onClick={handleDrawerToggle}
-            sx={{ mr: 0,  borderRadius:'50%', backgroundColor:'#004000',
+            sx={{ mr: 0,  borderRadius:'50%', backgroundColor:'#4ABA16',
             display: { xs:'flex', sm: 'flex', md: 'none', horizontal: 'right' }, }}
           >
             <MenuIcon />
@@ -256,7 +260,7 @@ export default function DrawerAppBar (props) {
           >
             Dream Medical
           </Typography>
-          <Box alignItems="center" sx={{ display: { xs: 'none', sm: 'none', md:'flex', xl:'flex', lg:'flex' } }}>
+          <Box  color="primary" sx={{ display: { xs: 'none', sm: 'none', md:'flex', xl:'flex', lg:'flex' }}}>
           <Box component="ul" className="menu">
         {navItems.map((menu, id) => {
           return <MenuItems items={menu} key={id} />;
@@ -300,6 +304,11 @@ export default function DrawerAppBar (props) {
        
           </Box>
         </Toolbar>
+
+        </Box>
+                 
+        
+
       </AppBar>
       <Box component="nav" >
         <Drawer

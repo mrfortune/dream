@@ -35,8 +35,7 @@ const CSection = () => {
                 width={960}
                 height={648}
                 alt=""
-              >
-                
+              > 
               </Image>
             </Box>
           </Grid>
