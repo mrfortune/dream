@@ -119,9 +119,7 @@ nav ul.menu li.menu-items ul.show li.menu-items:hover{
 nav ul.menu li.menu-items ul.click{
 display:none;
 }
-section{
-  padding:0 1rem 0 1rem;
-}
+
 .drawer {
   display: flex;
   flex-direction: column;
@@ -234,7 +232,7 @@ width:63%
 }
 .MuiTypography-h3 {
   font-size: clamp(1.206rem, -3.11rem + 7.38vw, 1.953rem) !important;
-  font-weight:500;
+  font-weight:700;
 }
 .MuiTypography-h3.cardHeader {
   font-size: clamp(1rem, -3.11rem + 7.38vw, 1.953rem);
@@ -587,10 +585,13 @@ ul.ulStyle li {
     padding-left: 1rem;
     padding-right: 1rem;
   }
-  /* .whatwedo{
-    background-color:#C7C60E;
-  } */
-
+  section.whatwedo{
+    padding:1rem 1rem;
+  }
+  .paddingLeft{
+    padding:1rem 1rem;
+  }
+/* button
   p.headerBody{
     width:100%;
     text-align:center;

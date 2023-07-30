@@ -7,6 +7,7 @@ import "@fortawesome/fontawesome-svg-core/styles.css";
 import { config } from "@fortawesome/fontawesome-svg-core";
 config.autoAddCss = false;
 import { Roboto } from 'next/font/google';
+import { IKImage, IKVideo, IKContext, IKUpload } from 'imagekitio-react'
 
 const roboto = Roboto({
   weight: ['100', '300', '400', '500', '700', '900'],

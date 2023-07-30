@@ -6,6 +6,7 @@ import myTheme from '../styles/theme/mytheme.js';
 import lightThemeTheme from '../styles/theme/lightTheme.js';
 import lightTheme from '../styles/theme/lightTheme.js';
 import { Roboto } from 'next/font/google';
+import { IKImage, IKVideo, IKContext, IKUpload } from 'imagekitio-react'
 
 const roboto = Roboto({
   weight: ['100', '300', '400', '500', '700', '900'],

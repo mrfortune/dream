@@ -170,61 +170,65 @@
   text-shadow: 1px 1px 1px #3c5c5e;
 }
 .heroWrapper {
-  position: relative;
-  width: 100vw;
-  height: 100vh;
   display:grid; 
+  grid-template-columns:1fr;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  /* grid-template-rows:1440px; */
+  grid-column-gap:0px;
+  grid-row-gap:0px;
+  align-content:center;
+  justify-content:center;
+  place-items: center;
+  place-content: center;
 }
 .heroWrapper .imageWrapper {
-    /* position: absolute; */
-    left: 0;
-    top: 0;
-    width: 100%;
-    /* height:45rem; */
-    object-fit: cover; 
-    overflow: hidden;
+    grid-area: 1 / 1 / 2 / 2;
 }
-
+.heroWrapper .heroContent{
+  grid-area: 1 / 1 / 2 / 2; 
+}
+.heroWrapper .heroContent h1,
+.heroWrapper .heroContent p{
+  max-width:40vw;
+}
+.heroWrapper .overlay{
+  grid-area: 1 / 1 / 2 / 2; 
+  min-width:350px;
+}
+.heroWrapper .imageWrapper .heroImage{
+  display:grid;
+  width: 100%;
+  height:100%;
+min-width:350px;
+ object-fit: cover; 
+}
 .heroWrapper .heroContent {
-  /* position: absolute;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  padding:2rem 1rem;
-  top:50%;
-  /* width:100%; *
-  grid-column: 1/2;
-    grid-row: 1/2;
-    grid-area: 1/2; */
-    z-index: 1; /* [1] */
-    grid-area: 1/-1;
-    display: flex;
-    flex-direction: column;
-    margin: auto; /* [2] */
-    text-align: left;
-    color:#eaeaea;
-    /* left: 50%;
-    top: 50%; */
-}
-.heroWrapper .heroContent div{
-  /* position: absolute; */
-  /* left: 50%; */
-  top: 20%;
-  z-index: 1;
-  /* transform: translate(-50%, -50%); */
-  text-align: left;
+  display:grid; 
+color:#fff;
+  align-items:center;
   padding-left:1rem;
+  place-self: center;
+  max-width:1536px;
+  width:100%;
 }
-.heroWrapper .heroContent div .nextui-button-text span a {
-  color: #333;
-  font-size: medium;
+.heroWrapper .heroContent button{
+  align-self:start;
+  max-width: fit-content;
+  min-width: fit-content;
+} 
+.heroWrapper .overlay{
+  display:grid;
+  width: 100%;
+  height:100%;
+  background: rgb(10,10,10);
+  background: linear-gradient(90deg, rgba(10,10,10,0.9164259453781513) 0%, rgba(18,18,18,0.5158657212885154) 47%, rgba(46,44,47,0) 100%);
 }
-.heroWrapper:after {
+/* .heroWrapper:after {
   content: "";
-  /* background-color: #000; */
+  /* background-color: #000; 
   opacity: 0.5;
   grid-area: 1/-1;
-}
-.heroWrapper .heroContent div h1{
+} */
+.heroWrapper .heroContent  h1{
   font-weight:900;
 }

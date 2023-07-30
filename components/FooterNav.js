@@ -25,13 +25,13 @@ const FooterNav = () => {
         flexWrap="wrap"
         justifyContent="center"
       >
-        <Grid container sx={{ maxWidth: "lg" }} spacing={2}>
+        <Grid container sx={{ maxWidth: "xl" }} spacing={2}>
           <Grid item xs={12} sm={12} md={4} lg={4} xl={4}>
             <Box flexGrow="1" component="div">
               <Link href="/">
                 <Image
                   loader={myLoader}
-                  src="/assets/dmlogo.png"
+                  src="https://ik.imagekit.io/ylqs11u10/dmlogo.png"
                   width={80}
                   height={40}
                   alt="Logo"

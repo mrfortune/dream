@@ -22,7 +22,7 @@ import { textAlign } from "@mui/system";
 import myLoader from "../components/Loader";
 import MyButton from '../components/MyButton';
 
-const { heroContent, heroWrapper, imageWrapper } = styles;
+const { heroContent, heroWrapper, overlay, imageWrapper, heroImage } = styles;
 const IMAGE_URL = 'https://www.dreammedical.info/assets/doctor.png';
 
 export default function Home() {
@@ -63,24 +63,29 @@ export default function Home() {
           }}
         > */}
       <Box component="section" className={heroWrapper}>
+      
+  
         <Box component="div" className={imageWrapper}>
           <Image
             priority
-            src="assets/doctor.png"
-            layout="fill"
+            src="https://ik.imagekit.io/ylqs11u10/doctor.png"
+            // layout="fill"
             objectFit="cover"
-            // width="2536"
-            // height="720"
+            width="2560"
+            height="1440"
             objectPosition="center"
-            alt="hero image example"
-            // grid="1/-1"
+            alt="Dream Medical Hero"
+        display='grid'
+        className={heroImage}
           />
         </Box>
+     <Box component="div" className={overlay}>
 
-        <Box component="div" className={heroContent}>
-          <Box component="div" maxWidth='xl'>
-            <Typography variant="h1">Revolutionizing <br></br>Medical Practices<br></br> with Advanced <br></br>Devices and Expertise</Typography>
-            <Typography variant="body1">Equip Your Skills with High-Performance<br></br> Medical Devices Designed for Precision and Excellence.</Typography>
+    </Box>
+        <Box component="div" className={heroContent}> 
+        
+            <Typography variant="h1">Revolutionizing Medical Practices with Advanced Devices and Expertise</Typography>
+            <Typography variant="body1">Equip Your Skills with High-Performance Medical Devices Designed for Precision and Excellence.</Typography>
             <Button
               size="lg"
               color="secondary"
@@ -93,10 +98,13 @@ export default function Home() {
                 Read more...
               </Link>
             </Button>
-          </Box>
+        
+          
 
         </Box>
+
       </Box>
+ 
       {/* <Grid  container spacing={2} mt={2} sx={{ maxWidth: "lg" }}>
             <Grid item xs={12} sm={12} md={7} lg={7} xl={7} pt={10}>
               <Text h1 className="boujee-text"  css={{
@@ -147,14 +155,12 @@ export default function Home() {
       </Box> */}
 
       <Box
-        className="whatwedo"
-        direction="row"
         display="grid"
         justifyContent="center"
         component="section"
         sx={{
           paddingTop: "3rem",
-          paddingBottom: "3rem",
+          paddingBottom: "3rem", paddingLeft:'1rem'
         }}
       >
         <Grid container sx={{ maxWidth: "xl", marginTop: "0" }} spacing={2}>
@@ -180,8 +186,7 @@ export default function Home() {
               variant="body1"
               sx={{ color: "#333", textAlign: "left", marginBottom: "0" }}
             >
-              Research with empathy to gather insights about your customers and
-              users to make actionable decisions
+              We pride ourselves on providing doctors and surgeons with a comprehensive range of advanced tools designed to elevate patient care and surgical outcomes. From state-of-the-art robotic-assisted systems to intuitive laparoscopic instruments, our products empower medical professionals to perform with unmatched precision and confidence, ensuring safer and more efficient procedures. Join us in revolutionizing healthcare with the tools of tomorrow, available today.
             </Typography>
           </Grid>
 
@@ -199,8 +204,7 @@ export default function Home() {
               variant="body1"
               sx={{ color: "#333", textAlign: "left", marginBottom: "0" }}
             >
-              Ideating and creating sketches, wireframes, user flows, sitemaps,
-              and hi-fidelity visual designs, and prototypes
+              At Dream Medical, we go beyond just providing products; we offer a personalized and seamless experience to doctors and surgeons. Our dedicated team of experts is committed to understanding your unique needs and assisting you throughout the entire process. From tailored product consultations and in-depth training sessions to responsive customer support, we are here to ensure that you receive the right solutions for your practice. Trust us to be your reliable partner in delivering cutting-edge medical devices that empower your profession and transform patient care.
             </Typography>
           </Grid>
           <Grid item xs={12} sm={6} md={4} lg={4} xl={4}>
@@ -222,8 +226,7 @@ export default function Home() {
               variant="body1"
               sx={{ color: "#333", textAlign: "left", marginBottom: "0" }}
             >
-              We build it. Testing, and delivering the best solution for your
-              project using multiple technology options.
+              Our consultation services go the extra mile in understanding your specific challenges and requirements. Through one-on-one sessions with our knowledgeable specialists, we delve into your practice's goals and tailor our recommendations accordingly. Whether you need guidance on integrating new technologies, optimizing workflow efficiencies, or staying updated on the latest advancements, our consultations are designed to empower you with valuable insights. Count on our expertise to make informed decisions that drive success in your medical practice and enhance patient outcomes.
             </Typography>
           </Grid>
         </Grid>

@@ -234,7 +234,7 @@ export default function DrawerAppBar (props) {
           >
           <Image 
           loader={myLoader}
-          src="/assets/dmlogo.png"
+          src="https://ik.imagekit.io/ylqs11u10/dmlogo.png"
           width={80} height={40}
           alt="Logo">
 
