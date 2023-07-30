@@ -31,7 +31,7 @@ const FooterNav = () => {
               <Link href="/">
                 <Image
                   loader={myLoader}
-                  src="assets/dmlogo.png"
+                  src="/assets/dmlogo.png"
                   width={80}
                   height={40}
                   alt="Logo"
@@ -93,7 +93,7 @@ const FooterNav = () => {
                   }}
                 >
                   <Box component="li">
-                    <Link href="/story">Story</Link>
+                    <Link href="/about">Story</Link>
                   </Box>
                   <Box component="li">
                     <Link href="/contact">Contact</Link>
