@@ -209,7 +209,7 @@ export default function DrawerAppBar (props) {
 
   return (
     <Box component ="div" sx={{ display: 'flex' }}>
-      {/* <CssBaseline /> */}
+      <CssBaseline />
       <AppBar component="nav" sx={{minHeight:'4rem', backgroundColor:'#333'}}>
         <Box component="div" display="flex"
         flexWrap="wrap"
@@ -234,7 +234,7 @@ export default function DrawerAppBar (props) {
           >
           <Image 
           loader={myLoader}
-          src="assets/dmlogo.png"
+          src="/assets/dmlogo.png"
           width={80} height={40}
           alt="Logo">
 
