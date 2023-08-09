@@ -239,6 +239,7 @@ width:63%
 }
 .MuiTypography-h4 {
   font-size: clamp(1.025rem, -3.11rem + 7.38vw, 1.563rem) !important;
+  font-weight:700;
 }
 .MuiTypography-h5 {
   font-size: clamp(1rem, -3.11rem + 7.38vw, 1.25rem) !important;
@@ -565,6 +566,9 @@ ul.ulStyle li {
 }
 .MuiIconButton-root:hover{
   background-color: #008C00;
+}
+section.whatwedo{
+  padding:1rem 1rem;
 }
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (min-width: 0px) and (max-width: 600px) {
